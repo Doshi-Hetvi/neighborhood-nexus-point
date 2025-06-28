@@ -57,9 +57,11 @@ const flatItems = [
 ];
 
 export function AppSidebar({ userRole }: AppSidebarProps) {
-  const { collapsed } = useSidebar();
+  const { state } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
+  
+  const isCollapsed = state === 'collapsed';
 
   const items = userRole === 'admin' ? adminItems : 
                userRole === 'committee' ? committeeItems : flatItems;
@@ -78,11 +80,11 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
   const roleInfo = getRoleInfo();
 
   return (
-    <Sidebar className={collapsed ? "w-14" : "w-64"} collapsible>
+    <Sidebar className={isCollapsed ? "w-14" : "w-64"} collapsible="icon">
       <div className="p-4 border-b">
         <div className="flex items-center gap-3">
           <Building2 className="h-8 w-8 text-blue-600" />
-          {!collapsed && (
+          {!isCollapsed && (
             <div>
               <h2 className="font-bold text-lg">SocietyHub</h2>
               <div className="flex items-center gap-1 text-sm text-gray-600">
@@ -113,7 +115,7 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
                       }
                     >
                       <item.icon className="h-5 w-5" />
-                      {!collapsed && <span>{item.title}</span>}
+                      {!isCollapsed && <span>{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
