@@ -8,6 +8,9 @@ import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashboard";
 import CommitteeDashboard from "./pages/CommitteeDashboard";
 import FlatDashboard from "./pages/FlatDashboard";
+import SocietyDetails from "./pages/SocietyDetails";
+import UserManagement from "./pages/UserManagement";
+import SystemSettings from "./pages/SystemSettings";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/society" element={<SocietyDetails />} />
+          <Route path="/admin/users" element={<UserManagement />} />
+          <Route path="/admin/settings" element={<SystemSettings />} />
           <Route path="/committee-dashboard" element={<CommitteeDashboard />} />
           <Route path="/flat-dashboard" element={<FlatDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
