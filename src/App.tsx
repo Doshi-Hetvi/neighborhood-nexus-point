@@ -18,6 +18,10 @@ import CommitteeMaintenance from "./pages/CommitteeMaintenance";
 import CommitteeMembers from "./pages/CommitteeMembers";
 import CommitteeRentals from "./pages/CommitteeRentals";
 import CommitteeWaterBills from "./pages/CommitteeWaterBills";
+import FlatBooking from "./pages/FlatBooking";
+import FlatAnnouncements from "./pages/FlatAnnouncements";
+import FlatMaintenance from "./pages/FlatMaintenance";
+import FlatMemberDetail from "./pages/FlatMemberDetail";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -45,6 +49,10 @@ const App = () => (
           <Route path="/committee/financial" element={<CommitteeFinancial />} />
           <Route path="/committee/maintenance" element={<CommitteeMaintenance />} />
           <Route path="/flat-dashboard" element={<FlatDashboard />} />
+          <Route path="/flat/booking" element={<FlatBooking />} />
+          <Route path="/flat/announcements" element={<FlatAnnouncements />} />
+          <Route path="/flat/maintenance" element={<FlatMaintenance />} />
+          <Route path="/flat/member-detail" element={<FlatMemberDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

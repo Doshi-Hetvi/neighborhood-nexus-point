@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
@@ -54,6 +53,7 @@ const flatItems = [
   { title: 'Maintenance', url: '/flat/maintenance', icon: Settings },
   { title: 'Announcements', url: '/flat/announcements', icon: Bell },
   { title: 'Event Booking', url: '/flat/booking', icon: Calendar },
+  { title: 'Member Detail', url: '/flat/member-detail', icon: User },
 ];
 
 export function AppSidebar({ userRole }: AppSidebarProps) {
