@@ -11,6 +11,13 @@ import FlatDashboard from "./pages/FlatDashboard";
 import SocietyDetails from "./pages/SocietyDetails";
 import UserManagement from "./pages/UserManagement";
 import SystemSettings from "./pages/SystemSettings";
+import CommitteeEvents from "./pages/CommitteeEvents";
+import CommitteeFestivals from "./pages/CommitteeFestivals";
+import CommitteeFinancial from "./pages/CommitteeFinancial";
+import CommitteeMaintenance from "./pages/CommitteeMaintenance";
+import CommitteeMembers from "./pages/CommitteeMembers";
+import CommitteeRentals from "./pages/CommitteeRentals";
+import CommitteeWaterBills from "./pages/CommitteeWaterBills";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -30,6 +37,13 @@ const App = () => (
           <Route path="/admin/users" element={<UserManagement />} />
           <Route path="/admin/settings" element={<SystemSettings />} />
           <Route path="/committee-dashboard" element={<CommitteeDashboard />} />
+          <Route path="/committee/members" element={<CommitteeMembers />} />
+          <Route path="/committee/rentals" element={<CommitteeRentals />} />
+          <Route path="/committee/events" element={<CommitteeEvents />} />
+          <Route path="/committee/festivals" element={<CommitteeFestivals />} />
+          <Route path="/committee/water-bills" element={<CommitteeWaterBills />} />
+          <Route path="/committee/financial" element={<CommitteeFinancial />} />
+          <Route path="/committee/maintenance" element={<CommitteeMaintenance />} />
           <Route path="/flat-dashboard" element={<FlatDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
